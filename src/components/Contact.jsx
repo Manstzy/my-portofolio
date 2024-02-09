@@ -5,6 +5,7 @@ import { PiTelegramLogo } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -13,12 +14,49 @@ const Contact = () => {
       className="bg-primary w-full h-full flex flex-col items-center"
     >
       <div className="mt-20 ">
-        <h1 className="font-lobster text-beauty text-xl">Contact me</h1>
-        <p className="font-poppins text-secondary text-sm">Get in touch</p>
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="font-lobster text-beauty text-xl"
+        >
+          Contact me
+        </motion.h1>
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="font-poppins text-secondary text-sm"
+        >
+          Get in touch
+        </motion.p>
       </div>
 
       <div className="grid grid-cols-1 p-2 gap-4 medium:grid-cols-2 medium:p-2 laptop:grid-cols-3">
-        <div className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl">
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl"
+        >
           <div>
             <CgMail className="text-3xl text-white mx-auto mt-1" />
             <p className="font-poppins text-white text-sm text-center">Email</p>
@@ -35,9 +73,20 @@ const Contact = () => {
               </a>
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl">
+        <motion.div
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl"
+        >
           <div>
             <FaWhatsapp className="text-2xl text-white mx-auto mt-1" />
             <p className="font-poppins text-white mt-1 text-sm text-center">
@@ -57,8 +106,19 @@ const Contact = () => {
               </a>
             </p>
           </div>
-        </div>
-        <div className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl">
+        </motion.div>
+        <motion.div
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="w-[250px] p-1 h-[110px] bg-beauty rounded-xl"
+        >
           <div>
             <PiTelegramLogo className="text-3xl text-white mx-auto mt-1" />
             <p className="font-poppins text-white text-sm text-center">
@@ -78,31 +138,130 @@ const Contact = () => {
               </a>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="bg-elegant w-full h-[200px] laptop:h-[120px] mt-5 border-t-slate-200 border-solid">
-        <h1 className="text-3xl mt-6 font-permanent text-primary text-center laptop:mt-1">
+        <motion.h1
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="text-3xl mt-6 font-permanent text-primary text-center laptop:mt-1"
+        >
           Arif
-        </h1>
+        </motion.h1>
 
         <div className="flex justify-center text-sm gap-4 text-white font-poppins mt-2 laptop:mt-0 laptop:text-[10px]">
-          <p className="hover:text-primary duration-300 transition-all">
+          <motion.p
+            initial={{ x: -20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            className="hover:text-primary duration-300 transition-all"
+          >
             <a href="#about">About</a>
-          </p>
-          <p className="hover:text-primary duration-300 transition-all">
+          </motion.p>
+          <motion.p
+            initial={{ x: 0, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            className="hover:text-primary duration-300 transition-all"
+          >
             <a href="#portofolio">portofolio</a>
-          </p>
-          <p className="hover:text-primary duration-300 transition-all">
+          </motion.p>
+          <motion.p
+            initial={{ x: 20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            className="hover:text-primary duration-300 transition-all"
+          >
             <a href="#skills">skills</a>
-          </p>
+          </motion.p>
         </div>
-        
+
         <div className="flex justify-center text-sm gap-4 text-white mt-5 laptop:mt-2">
-            <a href="https://www.instagram.com" target="blank" ><FaInstagram className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" /> </a>
-            <a href="https://github.com/Manstzy" target="blank"><LuGithub className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" /> </a>
-            <a href="https://id.linkedin.com/" target="blank"><FaLinkedinIn className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" /> </a>
+          <motion.a
+            initial={{ x: -10, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            href="https://www.instagram.com"
+            target="blank"
+          >
+            <FaInstagram className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" />{" "}
+          </motion.a>
+          <motion.a
+            initial={{ x: 0, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            href="https://github.com/Manstzy"
+            target="blank"
+          >
+            <LuGithub className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" />{" "}
+          </motion.a>
+          <motion.a
+            initial={{ x: 20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            href="https://id.linkedin.com/"
+            target="blank"
+          >
+            <FaLinkedinIn className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" />{" "}
+          </motion.a>
         </div>
-        <p className="mt-12 laptop:mt-3 text-center text-sm font-lobster text-white/80 laptop:text-[12px]">My portofolio &copy; 2024</p>
+        <motion.p
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="mt-12 laptop:mt-3 text-center text-sm font-lobster text-white/80 laptop:text-[12px]"
+        >
+          My portofolio &copy; 2024
+        </motion.p>
       </div>
     </div>
   );
