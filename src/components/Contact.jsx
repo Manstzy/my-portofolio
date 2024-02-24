@@ -212,7 +212,7 @@ const Contact = () => {
               ease: "easeIn",
               duration: 0.4,
             }}
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/arhiefcs_/"
             target="blank"
           >
             <FaInstagram className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" />{" "}
@@ -242,7 +242,7 @@ const Contact = () => {
               ease: "easeIn",
               duration: 0.4,
             }}
-            href="https://id.linkedin.com/"
+            href="https://www.linkedin.com/in/muhammad-arif-455a58287/"
             target="blank"
           >
             <FaLinkedinIn className="text-xl hover:scale-110 duration-300 transition-all hover:text-primary cursor-grab" />{" "}

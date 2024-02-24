@@ -4,14 +4,21 @@ import Navbar from "./components/Navbar"
 import Skills from "./components/Skills"
 import Portofolio from "./components/Portofolio"
 import Contact from "./components/Contact"
+import { useState } from "react"
 
 
 
 const App = () => {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   return (
     <>
-    <Navbar />
-    <Main />
+    <Navbar nav={nav} handleNav={handleNav} />
+    <Main nav={nav} />
     <About />
     <Skills />
     <Portofolio />
