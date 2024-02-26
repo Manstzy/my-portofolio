@@ -83,7 +83,7 @@ const Navbar = ({ nav, handleNav }) => {
         </li>
         <li>
           <Link
-            to="portofolio"
+            to="work"
             smooth={true}
             className={
               bgNav
@@ -91,7 +91,7 @@ const Navbar = ({ nav, handleNav }) => {
                 : "hover:text-secondary transition cursor-pointer"
             }
           >
-            Portofolio
+            Work
           </Link>
         </li>
         <li>
@@ -133,9 +133,9 @@ const Navbar = ({ nav, handleNav }) => {
           </Link>
         </li>
         <li className="hover:bg-secondary p-3 rounded-md">
-          <Link onClick={handleNav} to="portofolio" smooth={true}>
+          <Link onClick={handleNav} to="work" smooth={true}>
             <LuMountain className="mx-auto tablet:text-2xl phone:text-xl" />
-            Portofolio
+            Work
           </Link>
         </li>
         <li className="hover:bg-secondary p-3 rounded-md">

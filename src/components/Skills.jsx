@@ -1,5 +1,5 @@
 import { GoCheckCircleFill } from "react-icons/go";
-import { motion } from "framer-motion";
+
 const Skills = () => {
   return (
     <div
