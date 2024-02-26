@@ -3,7 +3,7 @@ import { LuLamp } from "react-icons/lu";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { MdOutlineHeadphones } from "react-icons/md";
 import { FaRegFileAlt } from "react-icons/fa";
-import Cv from "../assets/Cv-Ats.pdf";
+import Cv from "../../images/cv - Muhammad nu'man ma'arif.pdf";
 import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 const About = () => {
