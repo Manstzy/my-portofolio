@@ -4,22 +4,56 @@ import { LuExternalLink } from "react-icons/lu";
 import FoodWeb from "../../images/websitefood.png";
 import Login from "../../images/login.png";
 import FakeStore from "../../images/listproduct.png";
+import { motion } from "framer-motion";
 const Work = () => {
   return (
     <div
       id="work"
       className="h-full bg-primary w-full flex flex-col items-center px-8 medium:px-12"
     >
-      <h1 className="font-semibold font-lobster text-xl mt-20 text-beauty desktop:text-2xl">
+      <motion.h1
+        initial={{ y: -10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 0.4,
+        }}
+        className="font-semibold font-lobster text-xl mt-20 text-beauty desktop:text-2xl"
+      >
         Some Things I’ve Built
-      </h1>
-      <p className="font-poppins text-center text-elegant mt-0">
+      </motion.h1>
+      <motion.p
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 0.4,
+        }}
+        className="font-poppins text-center text-elegant mt-0"
+      >
         view the archieve
-      </p>
+      </motion.p>
 
       <div className="tablet:grid tablet:grid-cols-2 tablet:gap-4 large:gap-6 large:max-w-[650px]">
         {/* Creativo */}
-        <div className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer">
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer"
+        >
           <p className="text-white font-serif text-md text-center">
             Featured Project
           </p>
@@ -64,9 +98,20 @@ const Work = () => {
             to make this website and i see design in figma and then i write
             code..
           </p>
-        </div>
+        </motion.div>
         {/* Foodweb */}
-        <div className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer">
+        <motion.div
+          initial={{ x: 10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer"
+        >
           <p className="text-white font-serif text-md text-center">
             Featured Project
           </p>
@@ -116,9 +161,20 @@ const Work = () => {
             </a>{" "}
             to handle login registration with google account...
           </p>
-        </div>
+        </motion.div>
         {/* Assigment Harisenin */}
-        <div className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer">
+        <motion.div
+          initial={{ x: -10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer"
+        >
           <p className="text-white font-serif text-md text-center">
             Featured Project
           </p>
@@ -160,9 +216,20 @@ const Work = () => {
             </a>{" "}
             and make website as responsive as possibble
           </p>
-        </div>
+        </motion.div>
         {/* FakeStore */}
-        <div className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer">
+        <motion.div
+          initial={{ x: 10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="bg-beauty relative w-full px-2 py-2 mt-2 rounded-md cursor-pointer"
+        >
           <p className="text-white font-serif text-md text-center">
             Featured Project
           </p>
@@ -206,7 +273,7 @@ const Work = () => {
             logic for increase price product and decrease price product and
             added to card..
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

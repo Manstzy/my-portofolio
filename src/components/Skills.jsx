@@ -1,5 +1,5 @@
 import { GoCheckCircleFill } from "react-icons/go";
-
+import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <div
@@ -7,14 +7,49 @@ const Skills = () => {
       className="bg-primary w-full h-full flex flex-col items-center px-2"
     >
       <div>
-        <h1 className="font-permanent text-beauty text-xl mt-20 medium:mt-24 laptop:text-2xl laptop:mt-24 desktop:mt-28">
+        <motion.h1
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="font-permanent text-beauty text-xl mt-20 medium:mt-24 laptop:text-2xl laptop:mt-24 desktop:mt-28"
+        >
           Skills
-        </h1>
+        </motion.h1>
       </div>
 
-      <p className="font-poppins text-secondary text-sm">Technical Sills</p>
+      <motion.p
+        initial={{ y: -10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 0.4,
+        }}
+        className="font-poppins text-secondary text-sm"
+      >
+        Technical Sills
+      </motion.p>
       <div className="max-w-[300px] w-full medium:max-w-[400px] laptop:max-w-[650px] desktop:max-w-[700px] laptop:flex laptop:gap-14 laptop:justify-center laptop:my-10">
-        <div className="max-w-[300px] laptop:h-[250px] medium:max-w-[400px] medium:flex medium:flex-col medium:items-center medium:py-8 w-full px-5 py-4 bg-secondary shadow-md shadow-beauty mt-5 rounded-xl">
+        <motion.div
+          initial={{ x: -5, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="max-w-[300px] laptop:h-[250px] medium:max-w-[400px] medium:flex medium:flex-col medium:items-center medium:py-8 w-full px-5 py-4 bg-secondary shadow-md shadow-beauty mt-5 rounded-xl"
+        >
           <h1 className="text-white font-poppins text-center">
             Frontend Development
           </h1>
@@ -91,9 +126,20 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="max-w-[300px] laptop:h-[250px] medium:max-w-[400px] medium:flex medium:flex-col medium:items-center medium:py-8 w-full px-5 py-4 bg-secondary shadow-md shadow-beauty mt-8 laptop:mt-5 rounded-xl ">
+        <motion.div
+          initial={{ x: 5, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          className="max-w-[300px] laptop:h-[250px] medium:max-w-[400px] medium:flex medium:flex-col medium:items-center medium:py-8 w-full px-5 py-4 bg-secondary shadow-md shadow-beauty mt-8 laptop:mt-5 rounded-xl "
+        >
           <h1 className="text-white font-poppins text-center">
             Backend Development
           </h1>
@@ -126,7 +172,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

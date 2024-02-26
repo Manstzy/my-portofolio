@@ -2,7 +2,7 @@ import { GrGithub } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import nft from "../../images/nft.jpg";
 
 const Main = ({ nav }) => {
@@ -35,38 +35,96 @@ const Main = ({ nav }) => {
           deleteSpeed={500}
         />
       </p>
-      <p className="mt-2 text-center text-sm max-w-[280px] font-poppins medium:max-w-[300px] desktop:max-w-[400px]">
+      <motion.p
+        initial={{ x: 0, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 2 },
+          ease: "easeIn",
+          duration: 0.4,
+        }}
+        className="mt-2 text-center text-sm max-w-[280px] font-poppins medium:max-w-[300px] desktop:max-w-[400px]"
+      >
         Hi, I am very enthusiastic about web development and trying to fully
         dedicate myself to this field...
-      </p>
+      </motion.p>
       <div className="flex gap-3 mt-6">
-        <a href="https://github.com/Manstzy" target="blank">
+        <motion.a
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 2 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          href="https://github.com/Manstzy"
+          target="blank"
+        >
           <GrGithub
             className="hover:text-secondary transition-all duration-300 cursor-grab"
             size={26}
           />
-        </a>
-        <a href="https://www.linkedin.com/in/muhammad-arif-455a58287/" target="blank">
+        </motion.a>
+        <motion.a
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 2 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          href="https://www.linkedin.com/in/muhammad-arif-455a58287/"
+          target="blank"
+        >
           <FaLinkedin
             className="hover:text-secondary transition-all duration-300 cursor-grab"
             size={26}
           />
-        </a>
-        <a href="https://www.instagram.com/arhiefcs_/" target="blank">
+        </motion.a>
+        <motion.a
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 2 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
+          href="https://www.instagram.com/arhiefcs_/"
+          target="blank"
+        >
           <FaSquareInstagram
             className="hover:text-secondary transition-all duration-300 cursor-grab"
             size={26}
           />
-        </a>
+        </motion.a>
       </div>
 
-      <div className="w-[180px] h-[180px] rounded-full mt-8 bg-elegant flex justify-center items-center phone:w-[200px] phone:h-[200px] phone:mt-7 medium:w-[220px] medium:h-[220px] ">
+      <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 2 },
+          ease: "easeIn",
+          duration: 0.4,
+        }}
+        className="w-[180px] h-[180px] rounded-full mt-8 bg-elegant flex justify-center items-center phone:w-[200px] phone:h-[200px] phone:mt-7 medium:w-[220px] medium:h-[220px] "
+      >
         <img
           className="rounded-full w-[170px] h-[170px] phone:w-[190px] phone:h-[190px] medium:w-[210px] medium:h-[210px]"
           src={nft}
           alt=""
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
